@@ -23,4 +23,5 @@ class Greetings(commands.Cog):
     async def before_morning_greeting(self):
         """Intiliaze morning_greeting loop."""
         await self.bot.wait_until_ready()
-        await asyncio.sleep(delay=36000)  # wait 10 hours after boot
+        # await asyncio.sleep(delay=36000)  # wait 10 hours after boot
+        await asyncio.sleep(delay=79200)
