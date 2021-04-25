@@ -26,3 +26,7 @@ mods_role = ["Modérateurs", "Coordinateur", "Administrateur", "Dieu du Discord"
 react_role_msg_id = 647194400329302019
 
 logging_webhook_url = os.getenv("LOGS_WEBHOOK")
+
+forum_host = "XXXXXXXXX"
+forum_user_name = "XXXXXXXXX"
+forum_password = "XXXXXXXXX"
