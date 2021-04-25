@@ -21,3 +21,4 @@ from .youtube import Youtube
 from .dealabs import Dealabs
 from .greetings import Greetings
 from .errorlogs import ErrorLogs
+from .forum.register import Register

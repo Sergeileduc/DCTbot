@@ -1,7 +1,9 @@
-discord.py==1.4.1
+discord.py==1.7.1
 bs4
 google-api-python-client
 lxml
 praw
 pillow
 python-dotenv
+git+https://github.com/Sergeileduc/pyphpbb-sl.git@v0.11.1
+sqlite-utils==3.*

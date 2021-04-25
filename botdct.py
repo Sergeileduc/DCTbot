@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """Awesome Discord Bot."""
 
+import argparse
 import logging
-import sys
+from pathlib import Path
 
 import discord
 from discord.ext import commands
@@ -17,14 +18,23 @@ from utils.secret import token, dcteam_role_id, main_guild_id, modo_role_id
 
 prefix = '!'
 
-if len(sys.argv) > 1:
-    if sys.argv[1] == "--debug":
-        print("You are in debug mode.")
-        print("Prefix is now '?'")
-        prefix = '?'
+# --debug option
+parser = argparse.ArgumentParser()
+parser.add_argument("-d", "--debug",
+                    help="change prefix to '?'", action="store_true")
+args = parser.parse_args()
+if args.debug:
+    print("You are in debug mode.")
+    print("Prefix is now '?'")
+    prefix = '?'
+# done with parsing options with argparser
+
+intents = discord.Intents.default()
+intents.members = True
 
 bot = commands.Bot(command_prefix=prefix, help_command=None,
-                   description=None, case_insensitive=True)
+                   description=None, case_insensitive=True,
+                   intents=intents)
 
 my_giflist = GifJson("gifs.json")
 
@@ -43,6 +53,7 @@ cogs_list = [cogs.Admin,
              cogs.Misc,
              cogs.Notifications,
              cogs.Mod,
+             cogs.Register,
              cogs.Team,
              cogs.Urban,
              cogs.Youtube
@@ -71,7 +82,7 @@ async def on_ready():
         bot.add_cog(cog(bot))
 
 
-setup_logging()
+setup_logging(Path(__file__).resolve().parent / 'logging.json')
 logger = logging.getLogger(__name__)
 
 logger.info("This is an INFO message on the root logger.")

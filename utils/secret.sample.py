@@ -21,3 +21,6 @@ reddit_client_id = "XXXXXXX"
 reddit_useragent = "XXXXX"
 
 logging_webhook_url = "https://discordapp.com/api/webhooks/XXXXXXXXXXXXXXXXXX"
+forum_host = "XXXXXXXXX"
+forum_user_name = "XXXXXXXXX"
+forum_password = "XXXXXXXXX"
