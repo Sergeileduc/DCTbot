@@ -6,4 +6,4 @@ praw
 pillow
 python-dotenv
 git+https://github.com/Sergeileduc/pyphpbb-sl.git@v0.11.1
-sqlite-utils==3.*
+sqlite-utils==3.29
