@@ -9,7 +9,7 @@ Discord Bot with multiple features for a community server related to comicbooks.
 
 If you don't have `pip`, you have to install it with this command line (on Linux):
 ```
-sudo apt install python-pip
+sudo apt install python3-pip
 ```
 
 Then, use the following command line to install some needed libs:
